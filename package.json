@@ -1,0 +1,21 @@
+{
+  "name": "spacedeck-landing",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "rm -rf ./docs && tsc -b && vite build && touch ./docs/.nojekyll && git add ./docs",
+    "preview": "vite preview",
+    "prepare": "cp ./pre-commit ./.git/hooks/pre-commit && chmod +x ./.git/hooks/pre-commit"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "photoswipe": "^5.4.4",
+    "tailwindcss": "^4.3.0"
+  }
+}

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceDeck X - The first shoot-em-up deckbuilder</title>
+
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+
+    <meta
+      name="description"
+      content="In SpaceDeck X you draft cards in real time while dodging bullets and blasting enemies"
+    />
+
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-black text-gray-400 leading-[1.4] text-lg lg:text-xl selection:bg-gray-600 selection:text-gray-100 bg-fixed"
+  >
+    <div class="max-w-300 m-auto p-8">
+      <header class="flex flex-col items-center">
+        <h1 class="text-4xl font-bold mb-4 text-center max-w-160 w-full">
+          <img src="/logo-sm.png" aria-hidden="true" class="w-full" />
+          <span class="sr-only">SpaceDeck X</span>
+        </h1>
+
+        <p class="text-center max-w-130">
+          SpaceDeck X is a shoot-em-up deckbuilder where you draft cards in real
+          time while dodging bullets and blasting enemies. Survive intense
+          action stages, then face the boss in a card battle using the deck you
+          built under fire. Get blown up, unlock upgrades, and don't stop until
+          you get your dog back!
+        </p>
+
+        <h3
+          class="text-center text-2xl mt-12 text-gray-100 flex gap-2 items-center font-semibold"
+        >
+          <img
+            src="/menu-indicator.png"
+            aria-hidden="true"
+            class="shrink-0 w-4.5"
+          />
+          <div>Get notified when the Steam page is out</div>
+          <img
+            src="/menu-indicator.png"
+            aria-hidden="true"
+            class="rotate-180 shrink-0 w-4.5"
+          />
+        </h3>
+
+        <form
+          class="subscribe-form rounded-full border-2 border-transparent mt-2 flex flex-wrap gap-2 justify-center sm:gap-0 sm:focus-within:border-[#f2a73b] p-0.5"
+        >
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="rounded-full sm:rounded-l-full sm:rounded-r-none text-gray-100 placeholder:text-gray-400 pr-6 py-2 pl-4 sm:-mr-4 bg-gray-50/10 focus:outline-2 outline-offset-2 outline-amber-400 sm:outline-none grow"
+          />
+          <button
+            class="inline-block cursor-pointer self-center rounded-full bg-[#f2a73b] hover:bg-amber-400 text-gray-950 min-w-32 py-3 font-bold text-sm uppercase focus-visible:outline-2 -outline-offset-4 outline-amber-950"
+          >
+            Subscribe
+          </button>
+        </form>
+
+        <div class="error-message mt-2 text-red-500 hidden">
+          Something went wrong, please try again
+        </div>
+
+        <div
+          class="success-message hidden rounded-full mt-2 px-8 text-xl text-amber-400 uppercase font-bold outline-none grow leading-13"
+        >
+          Thank you!
+        </div>
+
+        <span class="text-center text-xl mt-2 mb-3">or</span>
+
+        <a
+          href="https://muffinman-io.itch.io/spacedeck-x"
+          class="inline-block self-center rounded-full bg-[#404f83] hover:bg-blue-50-400 text-gray-200 px-8 py-4 font-bold text-base uppercase focus:outline-2 outline-offset-2 outline-amber-400"
+        >
+          Play the current build
+        </a>
+      </header>
+
+      <main class="mt-8" id="screenshots">
+        <div class="grid grid-cols-2 gap-2 md:gap-4">
+          <a
+            href="/screenshots/shmup1.png"
+            class="block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+            data-pswp-width="1920"
+            data-pswp-height="1080"
+          >
+            <img
+              class="outline outline-gray-50/10 -outline-offset-1 rounded-sm"
+              src="/screenshots/shmup1.png"
+              alt=""
+            />
+          </a>
+          <a
+            href="/screenshots/oxide.png"
+            class="block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+            data-pswp-width="1920"
+            data-pswp-height="1080"
+          >
+            <img
+              class="outline outline-gray-50/10 -outline-offset-1 rounded-sm"
+              src="/screenshots/oxide.png"
+              alt=""
+            />
+          </a>
+        </div>
+
+        <p class="mt-12 max-w-160 relative mx-auto text-center">
+          SpaceDeck X is a retro-inspired shoot-em-up deckbuilding hybrid. The
+          release is planned for the end of the year with the demo coming to
+          Steam this fall. It is developed by a single person (<a
+            href="https://muffinman.io/"
+            class="underline decoration-amber-500 hover:text-amber-500"
+            >myself</a
+          >).
+        </p>
+        <p class="my-6 max-w-160 relative mx-auto text-center">
+          In the Steam version you can expect:
+        </p>
+        <ul
+          class="mb-12 max-w-160 relative mx-auto md:pl-12 list-disc marker:text-amber-500 list-inside"
+        >
+          <li>Achievements</li>
+          <li>Unlockable upgrades</li>
+          <li>Three player ships</li>
+          <li>More cards</li>
+          <li>More bosses</li>
+          <li>Story (told through pixel art comics)</li>
+          <li>Global and friend leaderboards</li>
+          <li>And maaaaaaaaaybe a local co-op</li>
+        </ul>
+
+        <div class="flex gap-4 mb-12 max-w-160 relative mx-auto">
+          <a
+            href="/arcade.jpg"
+            class="block w-1/4 shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+            data-pswp-width="1200"
+            data-pswp-height="1600"
+          >
+            <img
+              class="outline outline-gray-50/10 -outline-offset-1 rounded-sm"
+              src="/arcade-sm.jpg"
+              alt=""
+            />
+          </a>
+          <div>
+            <p>
+              SpaceDeck X is also available on an arcade cabinet at
+              <a
+                href="https://blastgalaxy.nl/"
+                class="underline decoration-amber-500 hover:text-amber-500"
+                >Blast Galaxy</a
+              >
+              in Amsterdam. Thanks to them and
+              <a
+                href="https://www.instagram.com/the.amsterdam.indie.arcade/"
+                class="underline decoration-amber-500 hover:text-amber-500"
+                >The Indie Arcade Amsterdam</a
+              >
+              for the opportunity!
+            </p>
+            <p>
+              It plays really well on the arcade and if you are around be sure
+              to check it out!
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 md:gap-4">
+          <a
+            href="/screenshots/cards.png"
+            class="block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+            data-pswp-width="1920"
+            data-pswp-height="1080"
+          >
+            <img
+              class="outline outline-gray-50/10 -outline-offset-1 rounded-sm"
+              src="/screenshots/cards.png"
+              alt=""
+            />
+          </a>
+          <a
+            href="/screenshots/shmup3.png"
+            class="block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+            data-pswp-width="1920"
+            data-pswp-height="1080"
+          >
+            <img
+              class="outline outline-gray-50/10 -outline-offset-1 rounded-sm"
+              src="/screenshots/shmup3.png"
+              alt=""
+            />
+          </a>
+          <a
+            href="/screenshots/ships.png"
+            class="block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+            data-pswp-width="1920"
+            data-pswp-height="1080"
+          >
+            <img
+              class="outline outline-gray-50/10 -outline-offset-1 rounded-sm"
+              src="/screenshots/ships.png"
+              alt=""
+            />
+          </a>
+          <a
+            href="/screenshots/b2.png"
+            class="block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+            data-pswp-width="1920"
+            data-pswp-height="1080"
+          >
+            <img
+              class="outline outline-gray-50/10 -outline-offset-1 rounded-sm"
+              src="/screenshots/b2.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </main>
+
+      <footer class="mt-12 max-w-120 relative mx-auto text-center text-base">
+        <p class="">
+          If you subscribe, your email will never be shared with anyone and only
+          used to send you the game updates.
+        </p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

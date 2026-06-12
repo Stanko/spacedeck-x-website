@@ -1,0 +1,10 @@
+@import "photoswipe/style.css";
+@import "tailwindcss";
+
+body {
+  background-image: url(/bg.png);
+  background-size: cover;
+  background-position: center;
+  image-rendering: crisp-edges;
+  min-height: 100svh;
+}
