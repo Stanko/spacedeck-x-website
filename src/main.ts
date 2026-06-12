@@ -18,8 +18,8 @@ const successMessage = document.querySelector(
 const errorMessage = document.querySelector(".error-message") as HTMLDivElement;
 const submitButton = form.querySelector("button") as HTMLButtonElement;
 
-const API = "http://localhost:4000/newsletter";
-// "https://sdx-api.muffinman.io/newsletter";
+const API = "https://sdx-api.muffinman.io/newsletter";
+// "http://localhost:4000/newsletter";
 
 const isValidEmailAddress = (email: string): boolean => {
   const emailRegex =
