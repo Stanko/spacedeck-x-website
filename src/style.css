@@ -1,6 +1,6 @@
 @import "photoswipe/style.css";
 @import "tailwindcss";
 
-.bg img {
+.crisp {
   image-rendering: crisp-edges;
 }
