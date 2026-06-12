@@ -3,7 +3,7 @@ import PhotoSwipe from "photoswipe";
 
 const lightbox = new PhotoSwipeLightbox({
   gallery: "#screenshots",
-  children: "a",
+  children: ".image",
   pswpModule: PhotoSwipe,
 });
 lightbox.init();
