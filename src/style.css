@@ -1,6 +1,31 @@
 @import "photoswipe/style.css";
 @import "tailwindcss";
 
+@font-face {
+  font-family: "nope8";
+  src:
+    url("/nope8/Nope8.ttf") format("truetype"),
+    url("/nope8/Nope8.woff2") format("woff2"),
+    url("/nope8/Nope8.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .crisp {
   image-rendering: crisp-edges;
+}
+
+.nope8 {
+  font-family: "nope8", sans-serif;
+  line-height: 0.75em;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: rgb(165, 171, 184);
 }
