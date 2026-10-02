@@ -10,6 +10,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  size-adjust: 145%;
 }
 
 @font-face {
@@ -18,6 +19,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  size-adjust: 110%;
 }
 
 @font-face {
@@ -26,6 +28,7 @@
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+  size-adjust: 110%;
 }
 
 .crisp {
@@ -34,7 +37,7 @@
 
 .nope8 {
   font-family: "nope8", sans-serif;
-  line-height: 0.75em;
+  line-height: 1.2;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
