@@ -31,7 +31,8 @@
   size-adjust: 110%;
 }
 
-.crisp {
+.crisp,
+.pswp__img {
   image-rendering: crisp-edges;
 }
 
