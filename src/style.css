@@ -63,6 +63,36 @@ body {
     sans-serif;
 }
 
+/* ----- Characters ----- */
+
+@keyframes float {
+  50% {
+    transform: translateY(20%);
+  }
+}
+
+@keyframes float-zappa {
+  50% {
+    transform: translateY(25%);
+  }
+}
+
+@media (max-width: 999px) {
+  .characters {
+    display: none;
+  }
+}
+
+.character--pilot {
+  filter: drop-shadow(0 0 6px rgba(255 255 255 / 0.15));
+  animation: float 10s infinite;
+}
+
+.character--zappa {
+  filter: drop-shadow(0 0 10px rgba(255 255 255 / 0.4));
+  animation: float-zappa 8s infinite;
+}
+
 /* ----- TRAILER PLAYER ----- */
 
 .trailer {
@@ -363,6 +393,20 @@ body {
   translate: 0 50%;
 }
 
+/* Volume: white, orange while hovered/dragged */
+.trailer-volume .trailer-slider-fill,
+.trailer-volume .trailer-slider-thumb {
+  background: white;
+  transition: background-color 0.15s;
+}
+
+.trailer-volume:hover .trailer-slider-fill,
+.trailer-volume:hover .trailer-slider-thumb,
+.trailer-volume .trailer-slider[data-dragging] .trailer-slider-fill,
+.trailer-volume .trailer-slider[data-dragging] .trailer-slider-thumb {
+  background: var(--trailer-accent);
+}
+
 /* Popups (volume + quality) */
 .trailer-popup {
   --media-popover-side-offset: 0.5rem;
@@ -378,6 +422,19 @@ body {
 
 .trailer-popup:not([data-open]) {
   opacity: 0;
+}
+
+/* Invisible bridge over the gap to the button, so hover isn't lost */
+.trailer-volume {
+  overflow: visible;
+}
+
+.trailer-volume::after {
+  content: "";
+  position: absolute;
+  inset-inline: -1px;
+  top: 100%;
+  height: calc(var(--media-popover-side-offset) + 1px);
 }
 
 .trailer-menu {
