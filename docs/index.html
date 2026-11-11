@@ -38,8 +38,8 @@
       property="og:image"
       content="https://spacedeck.muffinman.io/spacedeck.png"
     />
-    <script type="module" crossorigin src="./assets/index-BSxgEJ9J.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-FN3USB1O.css">
+    <script type="module" crossorigin src="./assets/index-BiWJtmFB.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-fOzc9-js.css">
   </head>
   <body
     class="bg-black leading-[1.4] text-lg lg:text-xl selection:bg-gray-600 selection:text-gray-100 min-svh"
@@ -47,8 +47,9 @@
     <div class="fixed inset-0 -z-1">
       <img src="./bg.png" alt="" class="crisp w-full h-full object-cover" />
     </div>
-    <div class="max-w-300 m-auto p-8">
-      <header class="flex flex-col items-center">
+
+    <header class="flex flex-col items-center">
+      <div class="max-w-300 m-auto p-8 flex flex-col items-center">
         <h1 class="text-4xl font-bold mb-4 text-center max-w-160 w-full">
           <img
             src="./logo-sm.png"
@@ -65,7 +66,196 @@
           turn-based card battle. Get blown up, start again, and keep fighting
           until you get your dog back!
         </p>
+      </div>
 
+      <video-player class="block w-full max-w-284">
+        <media-container class="trailer">
+          <video id="trailer" playsinline preload="metadata">
+            <source
+              src="./trailer/spacedeck-trailer-2160.mp4"
+              type="video/mp4"
+              data-height="2160"
+              data-bitrate="6500000"
+            />
+            <source
+              src="./trailer/spacedeck-trailer-1080.mp4"
+              type="video/mp4"
+              data-height="1080"
+              data-bitrate="2400000"
+            />
+            <source
+              src="./trailer/spacedeck-trailer-720.mp4"
+              type="video/mp4"
+              data-height="720"
+              data-bitrate="1300000"
+            />
+            <a href="/trailer/spacedeck-trailer-1080.mp4"
+              >Video player not working?</a
+            >
+          </video>
+
+          <media-poster class="trailer-poster">
+            <img src="./trailer/poster.jpg" alt="" />
+          </media-poster>
+
+          <media-buffering-indicator class="trailer-buffering">
+            <media-icon family="compat" name="spinner"></media-icon>
+          </media-buffering-indicator>
+
+          <media-play-button class="trailer-big-play">
+            <media-icon family="compat" name="play"></media-icon>
+          </media-play-button>
+
+          <media-controls>
+            <media-controls-backdrop
+              class="trailer-backdrop"
+            ></media-controls-backdrop>
+            <media-controls-content class="trailer-controls">
+              <media-controls-group
+                class="trailer-toolbar"
+                aria-label="Playback controls"
+              >
+                <media-play-button class="trailer-button trailer-play">
+                  <media-icon family="compat" name="play"></media-icon>
+                  <media-icon family="compat" name="pause"></media-icon>
+                  <media-icon family="compat" name="restart"></media-icon>
+                </media-play-button>
+
+                <media-mute-button
+                  commandfor="trailer-volume"
+                  class="trailer-button trailer-mute"
+                >
+                  <media-icon family="compat" name="volume-off"></media-icon>
+                  <media-icon family="compat" name="volume-low"></media-icon>
+                  <media-icon family="compat" name="volume-high"></media-icon>
+                </media-mute-button>
+                <media-volume-popover
+                  id="trailer-volume"
+                  open-on-hover
+                  side="top"
+                  class="trailer-popup trailer-volume"
+                >
+                  <media-volume-slider
+                    orientation="vertical"
+                    class="trailer-slider trailer-slider-vertical"
+                  >
+                    <media-slider-track class="trailer-slider-track">
+                      <media-slider-fill
+                        class="trailer-slider-fill"
+                      ></media-slider-fill>
+                    </media-slider-track>
+                    <media-slider-thumb
+                      class="trailer-slider-thumb"
+                    ></media-slider-thumb>
+                  </media-volume-slider>
+                </media-volume-popover>
+
+                <media-time-group class="trailer-time">
+                  <media-time type="current"></media-time>
+                  <media-time-separator></media-time-separator>
+                  <media-time type="duration"></media-time>
+                </media-time-group>
+
+                <media-time-slider class="trailer-slider trailer-progress">
+                  <media-slider-track class="trailer-slider-track">
+                    <media-slider-buffer
+                      class="trailer-slider-buffer"
+                    ></media-slider-buffer>
+                    <media-slider-fill
+                      class="trailer-slider-fill"
+                    ></media-slider-fill>
+                  </media-slider-track>
+                  <media-slider-thumb
+                    class="trailer-slider-thumb"
+                  ></media-slider-thumb>
+                </media-time-slider>
+
+                <button
+                  type="button"
+                  commandfor="trailer-quality"
+                  class="trailer-button"
+                  aria-label="Quality"
+                >
+                  <media-icon family="compat" name="gear"></media-icon>
+                </button>
+                <media-menu
+                  id="trailer-quality"
+                  side="top"
+                  align="end"
+                  class="trailer-popup trailer-menu"
+                >
+                  <media-menu-content>
+                    <media-quality-radio-group>
+                      <template>
+                        <media-menu-radio-item class="trailer-menu-item">
+                          <span data-part="label"></span>
+                          <media-menu-item-indicator force-mount>
+                            <media-icon
+                              family="compat"
+                              name="check"
+                            ></media-icon>
+                          </media-menu-item-indicator>
+                        </media-menu-radio-item>
+                      </template>
+                    </media-quality-radio-group>
+                  </media-menu-content>
+                </media-menu>
+
+                <media-fullscreen-button
+                  class="trailer-button trailer-fullscreen"
+                >
+                  <media-icon
+                    family="compat"
+                    name="fullscreen-enter"
+                  ></media-icon>
+                  <media-icon
+                    family="compat"
+                    name="fullscreen-exit"
+                  ></media-icon>
+                </media-fullscreen-button>
+              </media-controls-group>
+            </media-controls-content>
+          </media-controls>
+
+          <media-hotkey keys="Space" action="togglePaused"></media-hotkey>
+          <media-hotkey keys="k" action="togglePaused"></media-hotkey>
+          <media-hotkey keys="m" action="toggleMuted"></media-hotkey>
+          <media-hotkey keys="f" action="toggleFullscreen"></media-hotkey>
+          <media-hotkey keys="ArrowLeft" action="seekStep"></media-hotkey>
+          <media-hotkey keys="ArrowRight" action="seekStep"></media-hotkey>
+          <media-hotkey keys="ArrowUp" action="volumeStep"></media-hotkey>
+          <media-hotkey keys="ArrowDown" action="volumeStep"></media-hotkey>
+
+          <media-gesture
+            type="tap"
+            action="togglePaused"
+            pointer="mouse"
+          ></media-gesture>
+          <media-gesture
+            type="tap"
+            action="toggleControls"
+            pointer="touch"
+          ></media-gesture>
+          <media-gesture
+            type="doubletap"
+            action="toggleFullscreen"
+          ></media-gesture>
+
+          <media-status-announcer></media-status-announcer>
+
+          <media-error-dialog>
+            <media-dialog-popup class="trailer-error">
+              <media-dialog-title></media-dialog-title>
+              <media-dialog-description></media-dialog-description>
+              <media-dialog-close class="trailer-error-close"
+                >OK</media-dialog-close
+              >
+            </media-dialog-popup>
+          </media-error-dialog>
+        </media-container>
+      </video-player>
+
+      <div class="max-w-300 m-auto p-8 flex flex-col items-center">
         <h2 class="text-center mt-12 text-gray-100 flex gap-2 items-center">
           <img
             src="./menu-indicator.png"
@@ -115,8 +305,10 @@
         >
           Play the Demo
         </a>
-      </header>
+      </div>
+    </header>
 
+    <div class="max-w-300 m-auto p-8">
       <main class="mt-8" id="screenshots">
         <div class="grid grid-cols-2 gap-2 md:gap-4">
           <a
