@@ -32,11 +32,15 @@
 }
 
 .crisp,
-.pswp__img {
+.pswp__img,
+.site-background > img,
+.steam-button > img {
   image-rendering: crisp-edges;
 }
 
-.nope8 {
+.nope8,
+.section-heading,
+.steam-button {
   font-family: "nope8", sans-serif;
   line-height: 1.2;
   font-weight: 400;
@@ -61,6 +65,76 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+}
+
+@layer components {
+  .site-page {
+    @apply bg-black selection:bg-gray-600 selection:text-gray-100;
+  }
+
+  .site-background {
+    @apply fixed inset-0 -z-1;
+  }
+
+  .site-background > img {
+    @apply size-full object-cover;
+  }
+
+  .landing-container {
+    @apply m-auto max-w-300 p-8;
+  }
+
+  .content-column {
+    @apply relative mx-auto max-w-160;
+  }
+
+  .section-heading {
+    @apply text-xl text-gray-100 md:text-2xl xl:text-3xl;
+  }
+
+  .link {
+    @apply underline underline-offset-3 hover:text-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500;
+  }
+
+  .steam-button {
+    @apply mt-6 inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[#f2a73b] py-3 pr-3 pl-5 text-lg font-bold text-gray-950 no-underline hover:bg-amber-400 hover:text-gray-950 focus-visible:outline-amber-400 sm:pl-6 sm:text-xl md:text-2xl;
+  }
+
+  .steam-button > img {
+    @apply size-8;
+  }
+
+  .screenshot-grid {
+    @apply grid grid-cols-2 gap-2 md:gap-4;
+  }
+
+  .screenshot-grid > .image {
+    @apply aspect-video;
+  }
+
+  .image {
+    @apply block rounded-sm no-underline focus-visible:outline-amber-400;
+  }
+
+  .image > img {
+    @apply rounded-sm outline -outline-offset-1 outline-gray-50/20;
+  }
+}
+
+.privacy-copy {
+  @apply text-lg leading-relaxed text-gray-300;
+}
+
+.privacy-copy h2 {
+  @apply mt-8 mb-2 text-xl font-bold leading-snug text-gray-100;
+}
+
+.privacy-copy p + p {
+  @apply mt-3;
+}
+
+.privacy-copy ul {
+  @apply my-3 list-disc space-y-1 pl-6 marker:text-amber-500;
 }
 
 /* ----- Characters ----- */
@@ -286,6 +360,18 @@ body {
   outline-offset: 0.125rem;
 }
 
+.trailer-mute {
+  position: relative;
+}
+
+.trailer-mute::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 100%;
+  height: 1rem;
+}
+
 /* Icon state switching */
 .trailer-play media-icon,
 .trailer-mute media-icon,
@@ -372,7 +458,7 @@ body {
 
 .trailer-slider-vertical {
   justify-content: center;
-  width: 0.75rem;
+  width: 2.25rem;
   height: 5rem;
 }
 
@@ -424,19 +510,11 @@ body {
   opacity: 0;
 }
 
-/* Invisible bridge over the gap to the button, so hover isn't lost */
 .trailer-volume {
-  overflow: visible;
+  padding-inline: 0;
 }
 
-.trailer-volume::after {
-  content: "";
-  position: absolute;
-  inset-inline: -1px;
-  top: 100%;
-  height: calc(var(--media-popover-side-offset) + 1px);
-}
-
+/* Invisible bridge over the gap to the button, so hover isn't lost */
 .trailer-menu {
   min-width: 8.75rem;
   padding: 0.25rem;

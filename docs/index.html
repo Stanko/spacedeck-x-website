@@ -11,7 +11,7 @@
 
     <meta
       name="description"
-      content="In SpaceDeck you draft cards in real time while dodging bullets and blasting enemies"
+      content="In SpaceDeck you collect cards in real time while dodging bullets and blasting enemies"
     />
 
 
@@ -22,13 +22,13 @@
     />
     <meta
       property="og:description"
-      content="In SpaceDeck you draft cards in real time while dodging bullets and blasting enemies"
+      content="In SpaceDeck you collect cards in real time while dodging bullets and blasting enemies"
     />
     <meta property="og:url" content="https://spacedeck.muffinman.io" />
     <meta name="twitter:title" content="SpaceDeck" />
     <meta
       name="twitter:description"
-      content="In SpaceDeck you draft cards in real time while dodging bullets and blasting enemies"
+      content="In SpaceDeck you collect cards in real time while dodging bullets and blasting enemies"
     />
     <meta
       property="twitter:image"
@@ -38,18 +38,16 @@
       property="og:image"
       content="https://spacedeck.muffinman.io/spacedeck.png"
     />
-    <script type="module" crossorigin src="./assets/index-DtPXq-_q.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-_jSefWaq.css">
+    <script type="module" crossorigin src="./assets/index-CLcykiK8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/style-DhCm0K3_.css">
   </head>
-  <body
-    class="bg-black leading-[1.4] text-lg lg:text-xl selection:bg-gray-600 selection:text-gray-100 min-svh"
-  >
-    <div class="fixed inset-0 -z-1">
-      <img src="./bg.png" alt="" class="crisp w-full h-full object-cover" />
+  <body class="site-page leading-[1.4] text-lg lg:text-xl">
+    <div class="site-background">
+      <img src="./bg.png" alt="" />
     </div>
 
     <header class="flex flex-col items-center">
-      <div class="max-w-300 m-auto p-8 flex flex-col items-center">
+      <div class="landing-container flex flex-col items-center">
         <h1 class="text-4xl font-bold mb-4 text-center max-w-160 w-full">
           <img
             src="./logo-sm.png"
@@ -68,25 +66,25 @@
         </p>
         <a
           href="https://store.steampowered.com/app/4755570/SpaceDeck/"
-          class="nope8 inline-flex items-center gap-2 text-lg mt-6 sm:text-xl md:text-2xl whitespace-nowrap rounded-full bg-[#f2a73b] hover:bg-amber-400 text-gray-950 pl-5 pr-3 sm:pl-6 py-3 font-bold focus-visible:outline-2 outline-offset-2 outline-amber-400"
+          class="link steam-button"
         >
           WISHLIST ON STEAM
-          <img src="./steam.png" class="crisp w-8 h-8 md:w-10 md:h-10" />
+          <img src="./steam.png" class="md:size-10" />
         </a>
         <h2 class="nope8 text-2xl mt-8 text-white">Available December 2026.</h2>
         <p class="text-base text-center">The free demo is already available!</p>
       </div>
 
-      <div class="characters relative w-[90%] max-w-250 m-auto">
+      <div class="characters relative w-[95%] max-w-250 m-auto">
         <img
-          src="./ship-bridge-player.png"
+          src="./pilot.png"
           alt=""
-          class="crisp character character--pilot w-[158px] absolute bottom-50"
+          class="crisp character character--pilot w-[218px] absolute bottom-50"
         />
         <img
-          src="./ship-bridge-zappa.png"
+          src="./zappa.png"
           alt=""
-          class="crisp character character--zappa w-[102px] absolute bottom-56 right-15"
+          class="crisp character character--zappa w-[104px] absolute bottom-56 right-20"
         />
       </div>
 
@@ -111,7 +109,7 @@
               data-height="720"
               data-bitrate="1300000"
             />
-            <a href="/trailer/spacedeck-trailer-1080.mp4"
+            <a href="/trailer/spacedeck-trailer-1080.mp4" class="link"
               >Video player not working?</a
             >
           </video>
@@ -279,52 +277,42 @@
       </video-player>
     </header>
 
-    <div class="max-w-300 m-auto p-8">
+    <div class="landing-container">
       <main id="screenshots">
-        <div class="grid grid-cols-2 gap-2 md:gap-4">
+        <div class="screenshot-grid">
           <a
             href="/screenshots/shmup1.png"
-            class="image block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-video"
+            class="link image"
             data-pswp-width="1920"
             data-pswp-height="1080"
           >
-            <img
-              class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-              src="./screenshots/shmup1.png"
-              alt=""
-            />
+            <img src="./screenshots/shmup1.png" alt="" />
           </a>
           <a
             href="/screenshots/oxide.png"
-            class="image block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-video"
+            class="link image"
             data-pswp-width="1920"
             data-pswp-height="1080"
           >
-            <img
-              class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-              src="./screenshots/oxide.png"
-              alt=""
-            />
+            <img src="./screenshots/oxide.png" alt="" />
           </a>
         </div>
 
-        <p class="mt-12 max-w-160 relative mx-auto text-center">
+        <p class="mt-12 content-column text-center">
           <a
             href="https://store.steampowered.com/app/4755570/SpaceDeck/"
-            class="underline hover:text-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
+            class="link"
             >SpaceDeck</a
           >
           is a retro-inspired shoot 'em-up deckbuilding hybrid. It is developed
-          by a single person (<a
-            href="https://muffinman.io/"
-            class="underline hover:text-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
+          by a single person (<a href="https://muffinman.io/" class="link"
             >myself</a
           >), and all of the pixel art is drawn by hand. The release is planned
           for the end of the year with the demo already available!
         </p>
-        <p class="my-6 max-w-160 relative mx-auto text-center">Highlights:</p>
+        <p class="my-6 content-column text-center">Highlights:</p>
         <ul
-          class="mb-12 max-w-160 relative mx-auto md:pl-12 list-disc marker:text-amber-500 list-inside"
+          class="content-column mb-12 list-inside list-disc marker:text-amber-500 md:pl-12"
         >
           <li><span class="text-white">3</span> player ships</li>
           <li><span class="text-white">15</span> bosses</li>
@@ -337,136 +325,96 @@
           <li>And maaaaaaaaaybe a local co-op</li>
         </ul>
 
-        <h2
-          class="nope8 text-xl md:text-2xl xl:text-3xl text-center mt-12 text-gray-100 mb-4"
-        >
-          Screenshots
-        </h2>
+        <h2 class="section-heading mt-12 mb-4 text-center">Screenshots</h2>
 
-        <div class="grid grid-cols-2 gap-2 md:gap-4 justify-center">
+        <div class="screenshot-grid justify-center">
           <a
             href="/screenshots/cutscene.png"
-            class="image block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-video"
+            class="link image"
             data-pswp-width="1920"
             data-pswp-height="1080"
           >
-            <img
-              class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-              src="./screenshots/cutscene.png"
-              alt=""
-            />
+            <img src="./screenshots/cutscene.png" alt="" />
           </a>
           <a
             href="/screenshots/shmup2.png"
-            class="image block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-video"
+            class="link image"
             data-pswp-width="1920"
             data-pswp-height="1080"
           >
-            <img
-              class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-              src="./screenshots/shmup2.png"
-              alt=""
-            />
+            <img src="./screenshots/shmup2.png" alt="" />
           </a>
           <a
             href="/screenshots/ships.png"
-            class="image block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-video"
+            class="link image"
             data-pswp-width="1920"
             data-pswp-height="1080"
           >
-            <img
-              class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-              src="./screenshots/ships.png"
-              alt=""
-            />
+            <img src="./screenshots/ships.png" alt="" />
           </a>
           <a
             href="/screenshots/b2.png"
-            class="image block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-video"
+            class="link image"
             data-pswp-width="1920"
             data-pswp-height="1080"
           >
-            <img
-              class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-              src="./screenshots/b2.png"
-              alt=""
-            />
+            <img src="./screenshots/b2.png" alt="" />
           </a>
           <a
             href="/screenshots/upgrade-selection.png"
-            class="image block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-video"
+            class="link image"
             data-pswp-width="1920"
             data-pswp-height="1080"
           >
-            <img
-              class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-              src="./screenshots/upgrade-selection.png"
-              alt=""
-            />
+            <img src="./screenshots/upgrade-selection.png" alt="" />
           </a>
           <a
             href="/screenshots/cards.png"
-            class="image block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-video"
+            class="link image"
             data-pswp-width="1920"
             data-pswp-height="1080"
           >
-            <img
-              class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-              src="./screenshots/cards.png"
-              alt=""
-            />
+            <img src="./screenshots/cards.png" alt="" />
           </a>
         </div>
       </main>
 
       <section class="mt-16 flex flex-col items-center text-center">
-        <h2 class="nope8 text-xl md:text-2xl xl:text-3xl text-gray-100">
-          Ready to blow up some tiny ships?
-        </h2>
+        <h2 class="section-heading">Ready to blow up some tiny ships?</h2>
         <p class="mt-3 max-w-120">
           Wishlists really help a small game like this get noticed on Steam.
         </p>
         <a
           href="https://store.steampowered.com/app/4755570/SpaceDeck/"
-          class="nope8 inline-flex items-center gap-2 text-lg mt-6 sm:text-xl md:text-2xl whitespace-nowrap rounded-full bg-[#f2a73b] hover:bg-amber-400 text-gray-950 pl-5 pr-3 sm:pl-6 py-3 font-bold focus-visible:outline-2 outline-offset-2 outline-amber-400"
+          class="link steam-button"
         >
           WISHLIST ON STEAM
-          <img src="./steam.png" class="crisp w-8 h-8 md:w-12 md:h-12" />
+          <img src="./steam.png" class="md:size-12" />
         </a>
       </section>
 
-      <h2
-        class="nope8 text-xl md:text-2xl xl:text-3xl text-center mt-16 text-gray-100 mb-4"
-      >
+      <h2 class="section-heading mt-16 mb-4 text-center">
         SpaceDeck at the arcade
       </h2>
 
-      <div class="flex gap-4 mb-12 max-w-160 relative mx-auto items-center">
+      <div class="flex gap-4 mb-12 content-column items-center">
         <a
           href="/arcade.jpg"
-          class="image block w-1/4 shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 aspect-6/8"
+          class="link image w-1/4 shrink-0 aspect-6/8"
           data-pswp-width="1200"
           data-pswp-height="1600"
         >
-          <img
-            class="outline outline-gray-50/20 -outline-offset-1 rounded-sm"
-            src="./arcade-sm.jpg"
-            alt=""
-          />
+          <img src="./arcade-sm.jpg" alt="" />
         </a>
 
         <div>
           <p>
             SpaceDeck is also available on an arcade cabinet at
-            <a
-              href="https://blastgalaxy.nl/"
-              class="underline hover:text-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
-              >Blast Galaxy</a
-            >
+            <a href="https://blastgalaxy.nl/" class="link">Blast Galaxy</a>
             in Amsterdam. Thanks to them and
             <a
               href="https://www.instagram.com/the.amsterdam.indie.arcade/"
-              class="underline hover:text-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
+              class="link"
               >The Indie Arcade Amsterdam</a
             >
             for the opportunity!
@@ -481,12 +429,9 @@
       <footer class="mt-16 max-w-120 relative mx-auto text-center text-base">
         <p>
           Made with ♡ by
-          <a
-            href="https://muffinman.io/"
-            class="underline hover:text-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500"
-            >MuffinMan</a
-          >.
+          <a href="https://muffinman.io/" class="link">MuffinMan</a>.
         </p>
+        <p class="mt-2"><a href="./privacy/" class="link">Privacy Policy</a></p>
       </footer>
     </div>
   </body>
